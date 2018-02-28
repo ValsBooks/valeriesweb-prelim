@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link href="https://fonts.googleapis.com/css?family=Arimo|Lobster|Lora|Open+Sans" rel="stylesheet"> 
+         <title>
+         Valerie Biamonte | Contact
+        </title>
+             <link rel="stylesheet" href="../css/normalize.css">
+            <link rel="stylesheet" href="../css/main.css">
+            <style>
+                body{background: #c2c2c2;}
+                h1 {text-align: center}
+                .wrapper{width:400px; padding: 30px;
+                background: #929292; margin: 0 auto}
+                .wrapper h2{text-transform: uppercase;}
+                .wrapper p{color: #222;font-weight: bold}
+                .wrapper input[type=text],
+                .wrapper input[type=email],
+                textarea{
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 5px;
+                }
+                
+                .wrapper input[type=submit] {
+                    text-decoration: none;
+                    background: #3e2843;
+                    color: #ffffff;
+                    display: block;
+                    padding: 10px 15px;
+                    text-align: center;
+                    font-size: 15px;
+                    width: 100%;
+                    border: none;
+                }
+            </style>
+        <script>
+
+            function sumbit_form() {
+
+                var submit_form = document.getElementById('contact_form');
+                var name = submit_form.name.value;
+                var email = submit_form.email.value;
+                var phone = submit_form.phone.value;
+                var message = submit_form.message.value;
+
+                var recipient = 'valerie@valeriesweb.net';
+                // var recipient = 'biamontev@yahoo.com';
+                var subject = name + ' / ' + email + ' / ' + phone;
+
+                var mailto_url = 'mailto:'+ recipient +'?subject='+ subject + '&body=' + message;
+                window.location.href = mailto_url;
+            }
+
+        </script>
+    </head>
+    <body>
+    <header class="contact-header">
+              <div class="full-width">
+               </div>
+                  <nav>
+                    <ul>
+                        <li><a href="../index.html" target="_blank">Home</a></li>
+                        <li><a href="../gallery/index.html" target="_blank">Gallery</a></li>
+                        <li><a href="../about/index.html" target="_blank">About</a></li>
+                    </ul>
+                </nav>
+              <div>
+        </div>
+        </header>
+        <h1>Looking forward to hearing from you!</h1>
+        <hr>
+        <form id="contact_form" class="wrapper" action="JavaScript:sumbit_form()">
+            <h2>Contact Form</h2>
+            <p>All inquiries receive a response ASAP.</p>
+            <input type="text" name="name" placeholder="Your name goes here">
+            <input type="text" name="email" placeholder="Email Address">
+            <input type="text" name="phone" placeholder="Phone Number">      
+            <textarea name="message" cols="30" rows="15" placeholder="Type your message here"></textarea>
+            <input type="submit" value="Submit" />
+        </form>
+        <p class="contact-note"> This contact form was created in Javascript. This means when you click on the "Submit" button, your computer's default email program will open and an email will be pre-filled in and ready to send. Once I complete the back-end studies for web development, this will be a fully functioning contact form.</p>
+        <p class="contact-p"> You can also leave a message at (630) 847-0422</p>
+        <p class="contact-p"> Or text a Skype message to valerie.biamonte</p>
+    </body>
+</html>
